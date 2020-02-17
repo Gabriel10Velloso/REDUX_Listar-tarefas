@@ -19,6 +19,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from './filter/filter.pipe';
+import { APP_BASE_HREF } from '@angular/common';
 
 
 @NgModule({
@@ -44,7 +45,7 @@ import { FilterPipe } from './filter/filter.pipe';
     }),
 
   ],
-  providers: [],
+  providers: [ {provide: APP_BASE_HREF, useValue: '/'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
