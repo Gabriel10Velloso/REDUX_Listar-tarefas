@@ -1,4 +1,8 @@
 <header class="header">
-    <h1>Por Fazer</h1>
-    <input class="new-todo" placeholder="Adicione suas tarefas ?" autofocus>
+  <h1>Por Hacer</h1>
+  <input class="new-todo"
+         placeholder="Adicione suas tarefas"
+         [formControl]="txtInput"
+         (keyup.enter)="agregarTodo()"
+         autofocus>
 </header>
