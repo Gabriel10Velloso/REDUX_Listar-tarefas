@@ -45,7 +45,7 @@ import { APP_BASE_HREF } from '@angular/common';
     }),
 
   ],
-  providers: [ {provide: APP_BASE_HREF, useValue: '/'}],
+  // providers: [ {provide: APP_BASE_HREF, useValue: '/'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
