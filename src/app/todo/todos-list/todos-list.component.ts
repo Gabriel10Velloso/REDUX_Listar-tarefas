@@ -11,7 +11,7 @@ import { Todo } from '../model/todo.model';
 export class TodosListComponent implements OnInit {
 
   todos: Todo[] = [];
-  filtro: string;
+  filtro;
 
   constructor( private store: Store<AppState> ) { }
 
