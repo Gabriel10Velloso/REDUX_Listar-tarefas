@@ -2,9 +2,11 @@ import { Action } from '@ngrx/store';
 
 export const AGREGAR_TODO = '[TODO] Add todo';
 
+// Pegando a ação para editar o estilo checked
 export const TOGGLE_TODO = '[TODO] Toggle todo';
 export const TOGGLE_ALL_TODO = '[TODO] Toggle ALL todo';
 
+// Pegando a ação para editar o texto
 export const EDITAR_TODO = '[TODO] Editar todo';
 export const BORRAR_TODO = '[TODO] Borrar todo';
 export const BORRAR_ALL_TODO = '[TODO] Borrar all todo';
@@ -22,15 +24,15 @@ export class ToggleTodoAction implements Action {
     constructor( public id: number ) {}
 }
 
+// Editando estilo para checked field
 export class ToggleAllTodoAction implements Action {
     readonly type = TOGGLE_ALL_TODO;
-
     constructor( public completado: boolean ) {}
 }
 
+// Editando Texto
 export class EditarTodoAccion implements Action {
     readonly type = EDITAR_TODO;
-
     constructor( public id: number, public texto: string ) {}
 }
 

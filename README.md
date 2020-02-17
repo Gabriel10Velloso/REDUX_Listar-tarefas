@@ -21,7 +21,7 @@ Estilizando o campo de editar TodosItemComponent
 
 ## Pegando as alterações do campo check field;
 ````
-commit 
+commit 30049b377ee3f68c06f371cfe7184264ad3fa2e3
 this.chkField.valueChanges
 .subscribe( () => {
   const accion = new ToggleTodoAction( this.todo.id );
