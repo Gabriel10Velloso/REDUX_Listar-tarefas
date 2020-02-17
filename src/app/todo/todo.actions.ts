@@ -24,10 +24,10 @@ export class ToggleTodoAction implements Action {
     constructor( public id: number ) {}
 }
 
-// Editando estilo para checked field
+// Selecionando todos os campos
 export class ToggleAllTodoAction implements Action {
     readonly type = TOGGLE_ALL_TODO;
-    constructor( public completado: boolean ) {}
+    constructor( public completo: boolean ) {}
 }
 
 // Editando Texto
