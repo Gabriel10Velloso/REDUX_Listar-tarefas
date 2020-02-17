@@ -6,39 +6,34 @@ const todo1 = new Todo('Teste 1 REDUX / Angular');
 const todo2 = new Todo('Teste 2 REDUX / Angular');
 const todo3 = new Todo('Teste 3 REDUX / Angular');
 
-// todo2.completado = true;
+todo2.completo = true;
 
 const estadoInicial: Todo[] = [todo1, todo2, todo3];
 
 
-export function todoReducer( state = estadoInicial,
-                            action: fromTodo.Acciones ): Todo[] {
+export function todoReducer(state = estadoInicial,
+  action: fromTodo.Acciones): Todo[] {
 
-   switch ( action.type ) {
+  switch (action.type) {
 
     case fromTodo.AGREGAR_TODO:
-        const todo = new Todo( action.texto );
-        return [ ...state, todo ];
+      const todo = new Todo(action.texto);
+      return [...state, todo];
 
-    // case fromTodo.TOGGLE_ALL_TODO:
-    //     return state.map( todoEdit => {
-    //         return {
-    //             ...todoEdit,
-    //             completado: action.completado
-    //         };
-    //     });
 
-    // case fromTodo.TOGGLE_TODO:
-    // return state.map( todoEdit => {
-    //     if ( todoEdit.id === action.id ) {
-    //         return {
-    //             ...todoEdit,
-    //             // completado: !todoEdit.completado
-    //         };
-    //     } else {
-    //         return todoEdit;
-    //     }
-    // });
+    // Ao clickar mudo o estado  - ( Edição).
+    // Ao clickar mudo o estado para completado editando o estilo.
+    case fromTodo.TOGGLE_TODO:
+      return state.map(todoEdit => {
+        if (todoEdit.id === action.id) {
+          return {
+            ...todoEdit,
+            completo: !todoEdit.completo
+          };
+        } else {
+          return todoEdit;
+        }
+      });
 
     // case fromTodo.EDITAR_TODO:
     //     return state.map( todoEdit => {
@@ -60,9 +55,9 @@ export function todoReducer( state = estadoInicial,
 
 
     default:
-        return state;
+      return state;
 
-   }
+  }
 
 }
 

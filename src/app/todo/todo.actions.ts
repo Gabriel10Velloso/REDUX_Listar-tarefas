@@ -1,6 +1,6 @@
 import { Action } from '@ngrx/store';
 
-export const AGREGAR_TODO = '[TODO] Agregar todo';
+export const AGREGAR_TODO = '[TODO] Add todo';
 
 export const TOGGLE_TODO = '[TODO] Toggle todo';
 export const TOGGLE_ALL_TODO = '[TODO] Toggle ALL todo';
@@ -18,7 +18,7 @@ export class AgregarTodoAction implements Action {
 
 export class ToggleTodoAction implements Action {
     readonly type = TOGGLE_TODO;
-
+    // ID do Todo que preciso alterar para editar o estilo da classe
     constructor( public id: number ) {}
 }
 

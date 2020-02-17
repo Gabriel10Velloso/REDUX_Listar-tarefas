@@ -1,8 +1,8 @@
 export class Todo {
 
-    public id: number;
-    public texto: string;
-    public completo: boolean;
+    public id?: number;
+    public texto?: string;
+    public completo?: boolean;
 
     constructor(texto: string){
         this.texto = texto.charAt(0).toUpperCase() + texto.slice(1);

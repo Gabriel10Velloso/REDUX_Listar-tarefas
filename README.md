@@ -12,4 +12,21 @@ Adicionando itens (Tarefas)
 
 ````
 
+## Controlando -- todos items
+````
+commit 30049b377ee3f68c06f371cfe7184264ad3fa2e3
+Estilizando o campo de editar TodosItemComponent
+
+````
+
+## Pegando as alterações do campo check field;
+````
+commit 
+this.chkField.valueChanges
+.subscribe( () => {
+  const accion = new ToggleTodoAction( this.todo.id );
+  this.store.dispatch( accion );
+});
+````
+
 
