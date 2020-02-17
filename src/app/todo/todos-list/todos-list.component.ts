@@ -19,7 +19,7 @@ export class TodosListComponent implements OnInit {
     this.store.subscribe( state => {
 
       this.todos = state.todos;
-      // this.filtro = state.filtro;
+      this.filtro = state.filtro;
 
     });
   }
