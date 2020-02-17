@@ -2,9 +2,9 @@ import * as fromTodo from './todo.actions';
 import { Todo } from './model/todo.model';
 
 
-const todo1 = new Todo('Teste 1');
-const todo2 = new Todo('Teste 2');
-const todo3 = new Todo('Teste 3');
+const todo1 = new Todo('Teste 1 REDUX / Angular');
+const todo2 = new Todo('Teste 2 REDUX / Angular');
+const todo3 = new Todo('Teste 3 REDUX / Angular');
 
 // todo2.completado = true;
 
