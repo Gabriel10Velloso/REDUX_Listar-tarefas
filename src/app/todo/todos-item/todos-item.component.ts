@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { Todo } from '../model/todo.model';
 import { FormControl, Validators } from '@angular/forms';
-import { ToggleTodoAction, EditarTodoAccion } from '../todo.actions';
+import { ToggleTodoAction, EditarTodoAccion, BorrarTodoAction } from '../todo.actions';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/app.reducers';
 
@@ -57,6 +57,13 @@ export class TodosItemComponent implements OnInit {
     const accion = new EditarTodoAccion(this.todo.id, this.txtInput.value );
     this.store.dispatch( accion );
 
+  }
+
+
+  borrarTodo() {
+
+    const accion = new BorrarTodoAction( this.todo.id );
+    this.store.dispatch( accion );
   }
 
 }

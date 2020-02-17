@@ -29,4 +29,8 @@ this.chkField.valueChanges
 });
 ````
 
+## 50. Editar una tarea por hacer
+````
+commit dba271d8023e757ddd3cdee05559513f9258fd65
+````
 
