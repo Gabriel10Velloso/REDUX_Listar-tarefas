@@ -42,6 +42,7 @@ export class BorrarTodoAction implements Action {
     constructor( public id: number ) {}
 }
 
+// Apagar todas tarefas executadas
 export class BorrarAllTodoAction implements Action {
     readonly type = BORRAR_ALL_TODO;
 }
